@@ -6,12 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/lib/scanner.test.ts"
   },
   "dependencies": {
     "@octokit/webhooks-methods": "^5.0.0",
-    "@supabase/supabase-js": "^2.39.0",
-    "next": "^14.1.0",
+    "next": "^15.5.26",
     "octokit": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -21,8 +21,12 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
+    "postcss": "^8.5.28",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.0",
     "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.28"
   }
 }
